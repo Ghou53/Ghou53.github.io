@@ -52,5 +52,16 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain-wordmark.svg" title="Firebase" alt="Firebase" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg" title="MySQL"  alt="MySQL" width="40" height="40"/>&nbsp;  
   </div>
-  ### :fire: My Stats :
- [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Ghou53&hide_border=true&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
+  
+---
+
+### :fire: My Stats :
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Ghou53&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&fire=DD2727)](https://git.io/streak-stats)
+
+---
+
+### :writing_hand: My Portfolio :
+<!-- BLOG-POST-LIST:START -->
+- [Test Post](https://Ghou53.github.io/index)
+<!-- BLOG-POST-LIST:END -->
