@@ -66,6 +66,3 @@
 - [PORTFOLIO](https://Ghou53.github.io/index)
 <!-- BLOG-POST-LIST:END -->
 <!--https://www.sitepoint.com/github-profile-readme/ -->
-<div>
-![](https://hit.yhype.me/github/profile?user_id=62090828)
-  </div>
