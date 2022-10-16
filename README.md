@@ -27,3 +27,11 @@
 <div align="center">
   <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="600" height="300"/>
 </div>
+<div>
+### :hammer_and_wrench: Languages and Tools :
+  <img src="https://github.com/devicons/devicon/blob/master/icons/arduino/arduino-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
+   <img src="https://github.com/devicons/devicon/blob/master/icons/c/c-original.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
+   <img src="https://github.com/devicons/devicon/blob/master/icons/embeddedc/embeddedc-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
+   <img src="https://github.com/devicons/devicon/blob/master/icons/google/google-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
+   <img src="https://github.com/devicons/devicon/blob/master/icons/raspberrypi/raspberrypi-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
+  </div>
