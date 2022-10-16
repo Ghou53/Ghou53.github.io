@@ -63,5 +63,5 @@
 
 ### :writing_hand: My Portfolio :
 <!-- BLOG-POST-LIST:START -->
-- [Test Post](https://Ghou53.github.io/index)
+- [PORTFOLIO](https://Ghou53.github.io/index)
 <!-- BLOG-POST-LIST:END -->
