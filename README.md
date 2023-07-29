@@ -65,6 +65,6 @@
 
 ### :writing_hand: My Portfolio :
 <!-- BLOG-POST-LIST:START -->
-- [PORTFOLIO](https://Ghou53.github.io/index)
+- [PORTFOLIO](https://Ghou53.github.io/index.html)
 <!-- BLOG-POST-LIST:END -->
 <!--https://www.sitepoint.com/github-profile-readme/ -->
