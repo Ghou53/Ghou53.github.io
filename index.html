@@ -6,7 +6,7 @@
   <title>Ghouse Mohideen | Electrical & Systems Engineer</title>
 
   <!-- SEO -->
-  <meta name="description" content="Electrical & Electronics Engineer specializing in embedded systems, PCB design, robotics, autonomous platforms, and applied engineering solutions.">
+  <meta name="description" content="Electrical & Systems Engineer specializing in embedded systems, PCB design, robotics, autonomous platforms, and real-world engineering solutions.">
   <meta name="author" content="Ghouse Mohideen">
 
   <!-- Fonts -->
@@ -28,6 +28,10 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -70,13 +74,21 @@
       max-width: 1100px;
       margin: auto;
       padding: 6rem 1.5rem;
+      animation: fadeUp 0.8s ease both;
     }
 
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* HERO */
     .hero {
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 3rem;
+      align-items: center;
     }
 
     .hero h1 {
@@ -90,14 +102,23 @@
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 720px;
       color: var(--muted);
       margin-top: 1.2rem;
     }
 
+    .hero img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    }
+
     .btn {
       display: inline-block;
-      margin-top: 2.2rem;
+      margin-top: 2rem;
       padding: 0.8rem 1.6rem;
       border: 1px solid var(--accent);
       border-radius: 6px;
@@ -127,7 +148,7 @@
 
     .grid {
       display: grid;
-      gap: 1.5rem;
+      gap: 1.6rem;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 
@@ -145,11 +166,11 @@
     .card i {
       font-size: 1.5rem;
       color: var(--accent);
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
     }
 
     .role {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.6rem;
     }
 
     .role h4 {
@@ -168,9 +189,21 @@
       background: var(--bg-light);
     }
 
+    /* MOBILE */
     @media (max-width: 768px) {
       nav ul {
         display: none;
+      }
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero img {
+        margin: 2rem auto 0;
+      }
+      h3::after {
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   </style>
@@ -192,37 +225,42 @@
 </header>
 
 <section class="hero">
-  <h2>Hello, I’m</h2>
-  <h1>Ghouse Mohideen.</h1>
-  <h2>Electrical & Systems Engineer</h2>
-  <p>
-    Engineer and inventor focused on embedded systems, PCB design,
-    autonomous platforms, and real-world hardware solutions.
-    I design, build, debug, and deliver systems that operate outside the lab.
-  </p>
-  <a class="btn" href="#projects">Engineering Work</a>
+  <div>
+    <h2>Hello, I’m</h2>
+    <h1>Ghouse Mohideen.</h1>
+    <h2>Electrical & Systems Engineer</h2>
+    <p>
+      Engineer and inventor focused on embedded systems, PCB design,
+      autonomous platforms, and applied engineering solutions.
+      I design, build, debug, and deploy systems that work outside controlled labs.
+    </p>
+    <a class="btn" href="Ghouse_Mohideen_CV.pdf" download>
+      <i class="fas fa-download"></i> Download CV
+    </a>
+  </div>
+
+  <img src="profile.jpg" alt="Ghouse Mohideen">
 </section>
 
 <section id="summary">
   <h3>Professional Summary</h3>
   <p>
-    Electrical & Electronics Engineer with hands-on experience in system-level
-    design, embedded firmware, PCB development, and electromechanical integration.
+    Electrical & Electronics Engineer with hands-on experience in system-level design,
+    embedded firmware, PCB development, and electromechanical integration.
     Comfortable owning designs end-to-end — from requirements and schematics
-    to prototyping, testing, and field validation. Strong bias toward practical,
-    maintainable engineering over theoretical perfection.
+    to prototyping, validation, and real-world deployment.
   </p>
 </section>
 
 <section id="skills">
   <h3>Core Competencies</h3>
   <div class="grid">
-    <div class="card"><i class="fas fa-microchip"></i> Embedded C / C++, MCU bring-up, bare-metal & RTOS</div>
-    <div class="card"><i class="fas fa-project-diagram"></i> PCB Design – KiCad, Altium, schematics & layout</div>
-    <div class="card"><i class="fas fa-robot"></i> Robotics, autonomous navigation, sensor fusion</div>
-    <div class="card"><i class="fas fa-bolt"></i> Power electronics, converters, protection design</div>
-    <div class="card"><i class="fas fa-network-wired"></i> IoT, wired & wireless communication systems</div>
-    <div class="card"><i class="fab fa-linux"></i> Linux, ROS2, system integration & debugging</div>
+    <div class="card"><i class="fas fa-microchip"></i> Embedded C / C++, MCU bring-up, RTOS</div>
+    <div class="card"><i class="fas fa-project-diagram"></i> PCB Design – KiCad, Altium</div>
+    <div class="card"><i class="fas fa-robot"></i> Robotics & Autonomous Systems</div>
+    <div class="card"><i class="fas fa-bolt"></i> Power Electronics & Protection</div>
+    <div class="card"><i class="fas fa-network-wired"></i> IoT & Communication Systems</div>
+    <div class="card"><i class="fab fa-linux"></i> Linux, ROS2, System Integration</div>
   </div>
 </section>
 
@@ -230,77 +268,4 @@
   <h3>Engineering Experience</h3>
 
   <div class="role">
-    <h4>Systems & Embedded Engineer</h4>
-    <p>
-      Designed and developed embedded control systems including hardware
-      schematics, PCB layouts, firmware, and system integration.
-      Worked closely with mechanical and electrical subsystems to ensure
-      reliable real-world operation.
-    </p>
-  </div>
-
-  <div class="role">
-    <h4>Electronics Design & Prototyping</h4>
-    <p>
-      Led rapid prototyping efforts involving custom PCBs, power management,
-      sensor interfacing, and communication modules. Performed bring-up,
-      validation testing, and iterative design improvements.
-    </p>
-  </div>
-
-  <div class="role">
-    <h4>Autonomous & Mechatronic Systems</h4>
-    <p>
-      Contributed to development of autonomous and semi-autonomous platforms,
-      including control logic, perception inputs, actuator control, and safety
-      considerations for mobile systems.
-    </p>
-  </div>
-</section>
-
-<section id="projects">
-  <h3>Selected Projects</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Autonomous Off-Road Vehicle Platform</h4>
-      <p>
-        Designed control architecture, sensor integration, and navigation logic
-        for a rugged autonomous vehicle. Focused on reliability, terrain handling,
-        and modular system design.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>Smart Aquarium Automation System</h4>
-      <p>
-        End-to-end IoT system featuring sensor monitoring, automated water cycling,
-        remote data access, and live camera feed over Wi-Fi.
-      </p>
-    </div>
-
-    <div class="card">
-      <h4>RC Vehicle Conversion to Autonomous Testbed</h4>
-      <p>
-        Converted a consumer RC platform into a low-cost autonomous research
-        platform for experimentation with control algorithms, sensors,
-        and embedded processing.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <h3>Contact</h3>
-  <p>
-    <i class="fas fa-envelope"></i> your@email.com<br>
-    <i class="fab fa-github"></i> <a href="https://github.com/ghou53">github.com/ghou53</a><br>
-    <i class="fab fa-linkedin"></i> LinkedIn Profile
-  </p>
-</section>
-
-<footer>
-  © 2026 Ghouse Mohideen — Engineered, tested, and deployed.
-</footer>
-
-</body>
-</html>
+    <h
