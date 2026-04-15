@@ -58,8 +58,8 @@
 ### :fire: My Stats :
 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Ghou53&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&fire=DD2727)](https://git.io/streak-stats)
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/apiGhou53=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
-### [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ghou53&layout=compact&theme=vision-friendly-light)](https://github.com/anuraghazra/github-readme-stats)
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
 
 ---
 
