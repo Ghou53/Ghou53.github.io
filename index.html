@@ -1,345 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ghouse Mohideen | Electrical & Systems Engineer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghouse Mohideen | Systems Engineer</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Electrical & Systems Engineer specializing in embedded systems, PCB design, robotics, autonomous platforms, and real-world engineering solutions.">
-  <meta name="author" content="Ghouse Mohideen">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 
-  <style>
-    :root {
-      --bg: #0a192f;
-      --bg-light: #112240;
-      --text: #ccd6f6;
-      --muted: #8892b0;
-      --accent: #64ffda;
-    }
+<style>
+:root {
+  --bg:#0a0f1c;
+  --card:#11182b;
+  --accent:#00ffc3;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+body {
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:white;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+header {
+  padding:40px;
+  text-align:center;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-    }
+h1 {
+  font-size:3rem;
+}
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
+section {
+  padding:40px;
+}
 
-    header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(10,25,47,0.92);
-      backdrop-filter: blur(10px);
-      z-index: 100;
-    }
+.card {
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:20px;
+  box-shadow:0 0 20px rgba(0,255,195,0.1);
+}
 
-    nav {
-      max-width: 1100px;
-      margin: auto;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+a {
+  color:var(--accent);
+  text-decoration:none;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
+#twin3d { height:400px; }
+#mapView { height:400px; border-radius:12px; }
 
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 6rem 1.5rem;
-      animation: fadeUp 0.8s ease both;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 240px;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.6rem, 5vw, 4rem);
-      font-weight: 800;
-    }
-
-    .hero h2 {
-      color: var(--accent);
-      margin: 0.5rem 0;
-    }
-
-    .hero p {
-      max-width: 720px;
-      color: var(--muted);
-      margin-top: 1.2rem;
-    }
-
-    .hero img {
-      width: 240px;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 2px solid var(--accent);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.8rem 1.6rem;
-      border: 1px solid var(--accent);
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: var(--accent);
-      color: var(--bg);
-    }
-
-    h3 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      position: relative;
-    }
-
-    h3::after {
-      content: "";
-      width: 60px;
-      height: 2px;
-      background: var(--accent);
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-    }
-
-    .grid {
-      display: grid;
-      gap: 1.6rem;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-
-    .card {
-      background: var(--bg-light);
-      padding: 1.6rem;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    .card i {
-      font-size: 1.5rem;
-      color: var(--accent);
-      margin-bottom: 0.8rem;
-    }
-
-    .role {
-      margin-bottom: 1.6rem;
-    }
-
-    .role h4 {
-      margin-bottom: 0.4rem;
-    }
-
-    .role p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: var(--muted);
-      background: var(--bg-light);
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-      }
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      .hero img {
-        margin: 2rem auto 0;
-      }
-      h3::after {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-  </style>
+button {
+  padding:10px 20px;
+  background:var(--accent);
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <nav>
-    <strong>Ghouse Mohideen</strong>
-    <ul>
-      <li><a href="#summary">Summary</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <h1>Ghouse Mohideen</h1>
+  <p>Autonomous Systems | Embedded | Robotics</p>
+
+  <p>
+    <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </p>
 </header>
 
-<section class="hero">
-  <div>
-    <h2>Hello, I’m</h2>
-    <h1>Ghouse Mohideen.</h1>
-    <h2>Electrical & Systems Engineer</h2>
-    <p>
-      Engineer and inventor focused on embedded systems, PCB design,
-      autonomous platforms, and applied engineering solutions.
-      I design, build, debug, and deploy systems that work outside controlled labs.
-    </p>
-    <a class="btn" href="Ghouse_Mohideen_CV.pdf" download>
-      <i class="fas fa-download"></i> Download CV
-    </a>
-  </div>
-
-  <img src="profile.jpg" alt="Ghouse Mohideen">
+<!-- DIGITAL TWIN -->
+<section>
+<h2>Digital Twin</h2>
+<div class="card">
+<canvas id="twin3d"></canvas>
+</div>
 </section>
 
-<section id="summary">
-  <h3>Professional Summary</h3>
-  <p>
-    Electrical & Electronics Engineer with hands-on experience in system-level design,
-    embedded firmware, PCB development, and electromechanical integration.
-    Comfortable owning designs end-to-end — from requirements and schematics
-    to prototyping, validation, and real-world deployment.
-  </p>
+<!-- CONTROL -->
+<section>
+<h2>Remote Control</h2>
+<div class="card">
+<p>Use WASD keys</p>
+<div id="status">Idle</div>
+</div>
 </section>
 
-<section id="skills">
-  <h3>Core Competencies</h3>
-  <div class="grid">
-    <div class="card"><i class="fas fa-microchip"></i> Embedded C / C++, MCU bring-up, RTOS</div>
-    <div class="card"><i class="fas fa-project-diagram"></i> PCB Design – KiCad, Altium</div>
-    <div class="card"><i class="fas fa-robot"></i> Robotics & Autonomous Systems</div>
-    <div class="card"><i class="fas fa-bolt"></i> Power Electronics & Protection</div>
-    <div class="card"><i class="fas fa-network-wired"></i> IoT & Communication Systems</div>
-    <div class="card"><i class="fab fa-linux"></i> Linux, ROS2, System Integration</div>
-  </div>
+<!-- MAP -->
+<section>
+<h2>Live Tracking</h2>
+<div id="mapView"></div>
 </section>
 
-<section id="experience">
-  <h3>Engineering Experience</h3>
-
-  <div class="role">
-    <h4>Systems & Embedded Engineering</h4>
-    <p>
-      Designed embedded control systems including hardware schematics,
-      PCB layouts, firmware, and system integration for field-operating platforms.
-    </p>
-  </div>
-
-  <div class="role">
-    <h4>Electronics Design & Prototyping</h4>
-    <p>
-      Led rapid prototyping involving custom PCBs, power management,
-      sensor interfacing, and communication modules with iterative refinement.
-    </p>
-  </div>
-
-  <div class="role">
-    <h4>Autonomous & Mechatronic Platforms</h4>
-    <p>
-      Developed control logic, perception pipelines, and actuator interfaces
-      for autonomous and semi-autonomous mobile systems.
-    </p>
-  </div>
+<!-- CHART -->
+<section>
+<h2>Telemetry</h2>
+<canvas id="chart"></canvas>
 </section>
 
-<section id="projects">
-  <h3>Selected Projects</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Autonomous Off-Road Vehicle</h4>
-      <p>
-        Modular control architecture, sensor integration, and navigation logic
-        designed for harsh terrain and reliability.
-      </p>
-    </div>
-    <div class="card">
-      <h4>Smart Aquarium Automation</h4>
-      <p>
-        IoT-enabled monitoring, automated water cycling,
-        remote telemetry, and live video streaming.
-      </p>
-    </div>
-    <div class="card">
-      <h4>RC Platform → Autonomous Testbed</h4>
-      <p>
-        Conversion of consumer RC hardware into a research-grade
-        autonomous experimentation platform.
-      </p>
-    </div>
-  </div>
-</section>
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<section id="contact">
-  <h3>Contact</h3>
-  <p>
-    <a href="mailto:ghousemohideen21@gmail.com" style="color: var(--accent); text-decoration: none;">
-      <i class="fas fa-envelope"></i> ghousemohideen21@gmail.com
-    </a><br>
-    <a href="https://github.com/ghou53" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">
-      <i class="fab fa-github"></i> github.com/ghou53
-    </a><br>
-    <a href="https://www.linkedin.com/in/ghouse-mohideen-942855109" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">
-      <i class="fab fa-linkedin"></i> www.linkedin.com/in/ghouse-mohideen-942855109
-    </a>
-  </p>
-</section>
+<script>
+// ---------------- MQTT ----------------
+const client = mqtt.connect("wss://broker.hivemq.com:8884/mqtt");
 
+let position = { x:0, z:0, rotation:0 };
 
-<footer>
-  © 2026 Ghouse Mohideen — engineered with intent.
-</footer>
+// ---------------- 3D TWIN ----------------
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth/400, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({canvas:document.getElementById("twin3d")});
+renderer.setSize(window.innerWidth,400);
+
+const body = new THREE.Mesh(
+  new THREE.BoxGeometry(2,0.5,3),
+  new THREE.MeshStandardMaterial({color:0x00ffc3})
+);
+scene.add(body);
+
+const light = new THREE.PointLight(0xffffff,1);
+light.position.set(5,5,5);
+scene.add(light);
+
+camera.position.z=6;
+
+function animate(){
+  requestAnimationFrame(animate);
+  body.position.x = position.x;
+  body.rotation.y = position.rotation;
+  renderer.render(scene,camera);
+}
+animate();
+
+// ---------------- CONTROL ----------------
+const state={};
+
+window.addEventListener("keydown",e=>{
+  if(e.key==="w") state.f=1;
+  if(e.key==="s") state.f=-1;
+  if(e.key==="a") state.t=1;
+  if(e.key==="d") state.t=-1;
+
+  client.publish("robot/cmd_vel", JSON.stringify({
+    linear:state.f||0,
+    angular:state.t||0
+  }));
+});
+
+window.addEventListener("keyup",e=>{
+  state.f=0; state.t=0;
+  client.publish("robot/cmd_vel", JSON.stringify({linear:0,angular:0}));
+});
+
+// ---------------- MAP ----------------
+const map = L.map('mapView').setView([24.2075,55.7447],15);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+const marker = L.marker([24.2075,55.7447]).addTo(map);
+
+client.on("message",(topic,msg)=>{
+  if(topic==="robot/gps"){
+    const d=JSON.parse(msg.toString());
+    marker.setLatLng([d.lat,d.lon]);
+    map.panTo([d.lat,d.lon]);
+  }
+});
+
+client.subscribe("robot/gps");
+
+// ---------------- CHART ----------------
+const ctx=document.getElementById("chart");
+
+const chart=new Chart(ctx,{
+  type:"line",
+  data:{labels:[],datasets:[{label:"Temp",data:[]}]}
+});
+
+setInterval(()=>{
+  chart.data.labels.push("");
+  chart.data.datasets[0].data.push(30+Math.random()*5);
+  if(chart.data.labels.length>20){
+    chart.data.labels.shift();
+    chart.data.datasets[0].data.shift();
+  }
+  chart.update();
+},1000);
+
+</script>
 
 </body>
 </html>
-
-
