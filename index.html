@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ghouse Mohideen | Engineer & Innovator</title>
+  <title>Ghouse Mohideen | Electrical & Systems Engineer</title>
 
   <!-- SEO -->
-  <meta name="description" content="Portfolio of Ghouse Mohideen – Electrical & Electronics Engineer, Embedded Systems, PCB Design, Autonomous Vehicles.">
+  <meta name="description" content="Electrical & Systems Engineer specializing in embedded systems, PCB design, robotics, autonomous platforms, and real-world engineering solutions.">
   <meta name="author" content="Ghouse Mohideen">
 
   <!-- Fonts -->
@@ -30,11 +30,15 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     a {
@@ -46,7 +50,7 @@
       position: fixed;
       width: 100%;
       top: 0;
-      background: rgba(10,25,47,0.9);
+      background: rgba(10,25,47,0.92);
       backdrop-filter: blur(10px);
       z-index: 100;
     }
@@ -70,17 +74,25 @@
       max-width: 1100px;
       margin: auto;
       padding: 6rem 1.5rem;
+      animation: fadeUp 0.8s ease both;
     }
 
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* HERO */
     .hero {
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 3rem;
+      align-items: center;
     }
 
     .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-size: clamp(2.6rem, 5vw, 4rem);
       font-weight: 800;
     }
 
@@ -90,15 +102,24 @@
     }
 
     .hero p {
-      max-width: 600px;
+      max-width: 720px;
       color: var(--muted);
-      margin-top: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .hero img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
     }
 
     .btn {
       display: inline-block;
       margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
+      padding: 0.8rem 1.6rem;
       border: 1px solid var(--accent);
       border-radius: 6px;
       transition: 0.3s;
@@ -127,25 +148,38 @@
 
     .grid {
       display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.6rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 
     .card {
       background: var(--bg-light);
-      padding: 1.5rem;
+      padding: 1.6rem;
       border-radius: 10px;
       transition: transform 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
 
     .card i {
       font-size: 1.5rem;
       color: var(--accent);
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .role {
+      margin-bottom: 1.6rem;
+    }
+
+    .role h4 {
+      margin-bottom: 0.4rem;
+    }
+
+    .role p {
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
     footer {
@@ -155,9 +189,21 @@
       background: var(--bg-light);
     }
 
+    /* MOBILE */
     @media (max-width: 768px) {
       nav ul {
         display: none;
+      }
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero img {
+        margin: 2rem auto 0;
+      }
+      h3::after {
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   </style>
@@ -167,10 +213,11 @@
 
 <header>
   <nav>
-    <strong>Ghouse</strong>
+    <strong>Ghouse Mohideen</strong>
     <ul>
-      <li><a href="#about">About</a></li>
+      <li><a href="#summary">Summary</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -178,51 +225,96 @@
 </header>
 
 <section class="hero">
-  <h2>Hi, my name is</h2>
-  <h1>Ghouse Mohideen.</h1>
-  <h2>I build intelligent machines.</h2>
-  <p>
-    Electrical & Electronics Engineer focused on embedded systems, PCB design,
-    autonomous vehicles, and real-world engineering solutions.
-  </p>
-  <a class="btn" href="#projects">View My Work</a>
+  <div>
+    <h2>Hello, I’m</h2>
+    <h1>Ghouse Mohideen.</h1>
+    <h2>Electrical & Systems Engineer</h2>
+    <p>
+      Engineer and inventor focused on embedded systems, PCB design,
+      autonomous platforms, and applied engineering solutions.
+      I design, build, debug, and deploy systems that work outside controlled labs.
+    </p>
+    <a class="btn" href="Ghouse_Mohideen_CV.pdf" download>
+      <i class="fas fa-download"></i> Download CV
+    </a>
+  </div>
+
+  <img src="profile.jpg" alt="Ghouse Mohideen">
 </section>
 
-<section id="about">
-  <h3>About Me</h3>
+<section id="summary">
+  <h3>Professional Summary</h3>
   <p>
-    I’m a hands-on engineer who enjoys turning ideas into working hardware.
-    From embedded firmware and PCB layouts to autonomous systems and robotics,
-    I design things that actually work outside PowerPoint.
+    Electrical & Electronics Engineer with hands-on experience in system-level design,
+    embedded firmware, PCB development, and electromechanical integration.
+    Comfortable owning designs end-to-end — from requirements and schematics
+    to prototyping, validation, and real-world deployment.
   </p>
 </section>
 
 <section id="skills">
-  <h3>Skills</h3>
+  <h3>Core Competencies</h3>
   <div class="grid">
-    <div class="card"><i class="fas fa-microchip"></i> Embedded C / C++</div>
-    <div class="card"><i class="fas fa-project-diagram"></i> PCB Design (KiCad, Altium)</div>
-    <div class="card"><i class="fas fa-robot"></i> Robotics & Autonomous Vehicles</div>
+    <div class="card"><i class="fas fa-microchip"></i> Embedded C / C++, MCU bring-up, RTOS</div>
+    <div class="card"><i class="fas fa-project-diagram"></i> PCB Design – KiCad, Altium</div>
+    <div class="card"><i class="fas fa-robot"></i> Robotics & Autonomous Systems</div>
+    <div class="card"><i class="fas fa-bolt"></i> Power Electronics & Protection</div>
     <div class="card"><i class="fas fa-network-wired"></i> IoT & Communication Systems</div>
-    <div class="card"><i class="fas fa-bolt"></i> Power Electronics</div>
-    <div class="card"><i class="fab fa-linux"></i> Linux & ROS2</div>
+    <div class="card"><i class="fab fa-linux"></i> Linux, ROS2, System Integration</div>
+  </div>
+</section>
+
+<section id="experience">
+  <h3>Engineering Experience</h3>
+
+  <div class="role">
+    <h4>Systems & Embedded Engineering</h4>
+    <p>
+      Designed embedded control systems including hardware schematics,
+      PCB layouts, firmware, and system integration for field-operating platforms.
+    </p>
+  </div>
+
+  <div class="role">
+    <h4>Electronics Design & Prototyping</h4>
+    <p>
+      Led rapid prototyping involving custom PCBs, power management,
+      sensor interfacing, and communication modules with iterative refinement.
+    </p>
+  </div>
+
+  <div class="role">
+    <h4>Autonomous & Mechatronic Platforms</h4>
+    <p>
+      Developed control logic, perception pipelines, and actuator interfaces
+      for autonomous and semi-autonomous mobile systems.
+    </p>
   </div>
 </section>
 
 <section id="projects">
-  <h3>Projects</h3>
+  <h3>Selected Projects</h3>
   <div class="grid">
     <div class="card">
       <h4>Autonomous Off-Road Vehicle</h4>
-      <p>Custom control system, sensors, and navigation logic.</p>
+      <p>
+        Modular control architecture, sensor integration, and navigation logic
+        designed for harsh terrain and reliability.
+      </p>
     </div>
     <div class="card">
-      <h4>Smart Aquarium System</h4>
-      <p>IoT-based monitoring, automation, and live camera feed.</p>
+      <h4>Smart Aquarium Automation</h4>
+      <p>
+        IoT-enabled monitoring, automated water cycling,
+        remote telemetry, and live video streaming.
+      </p>
     </div>
     <div class="card">
-      <h4>RC Car to Autonomous Platform</h4>
-      <p>Low-cost robotics experimentation and daily-use automation.</p>
+      <h4>RC Platform → Autonomous Testbed</h4>
+      <p>
+        Conversion of consumer RC hardware into a research-grade
+        autonomous experimentation platform.
+      </p>
     </div>
   </div>
 </section>
@@ -232,12 +324,12 @@
   <p>
     <i class="fas fa-envelope"></i> your@email.com<br>
     <i class="fab fa-github"></i> <a href="https://github.com/ghou53">github.com/ghou53</a><br>
-    <i class="fab fa-linkedin"></i> LinkedIn Profile
+    <i class="fab fa-linkedin"></i> LinkedIn
   </p>
 </section>
 
 <footer>
-  © 2026 Ghouse Mohideen. Built with logic, not templates.
+  © 2026 Ghouse Mohideen — engineered with intent.
 </footer>
 
 </body>
